@@ -1,0 +1,7 @@
+{
+  "name": "integraVittaApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

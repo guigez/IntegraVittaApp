@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "integraVittaApp",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
