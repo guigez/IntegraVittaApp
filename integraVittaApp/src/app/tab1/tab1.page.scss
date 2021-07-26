@@ -1,0 +1,35 @@
+ion-toolbar, ion-title{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family:"Lucida Console", "Courier New", monospace;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  color: #F2C13B;
+  --ion-toolbar-background: #161925;
+}
+
+ion-content{
+  --ion-background-color: #161925;
+
+  .photo_information{
+    .photo{
+      width: 150px;
+      margin: 50px auto;
+      height: 150px;
+      left: 95px;
+      top: 58px;
+      display: block;
+    }
+
+    span{
+      margin: 15px 0;
+      font-size: 15px;
+      font-family: monospace;
+      display: block;
+    }
+  }
+}

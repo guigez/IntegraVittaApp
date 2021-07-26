@@ -1,9 +1,18 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <div class="logo ion-padding ion-text-center">
+    <img src="../../assets/images/logo.svg"/>
+  </div>
+  <div class="login ion-padding ion-text-center">
+    <ion-item class="item ion-margin"  transparent>
+      <ion-label class="label" position="floating">Usuário</ion-label>
+      <ion-input class="input" type="email"></ion-input>
+    </ion-item>
 
+    <ion-item class="item ion-margin" transparent>
+      <ion-label class="label" position="floating">Senha</ion-label>
+      <ion-input class="input" type="password"></ion-input>
+    </ion-item>
+
+    <ion-button class="button ion-margin"  roundsize="large" expand="block">Login</ion-button>
+  </div>
 </ion-content>

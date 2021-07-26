@@ -1,0 +1,29 @@
+ion-toolbar,
+ion-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  color: #f2c13b;
+  --ion-toolbar-background: #161925;
+}
+
+ion-content {
+  --ion-background-color: #161925;
+  ion-card {
+    display: flex;
+    background: linear-gradient(to bottom, #ff61d2 0%, #fe9090 90%);
+    border-radius: 15px;
+
+    ion-card-title {
+      font-weight: bold;
+      color: #fff;
+    }
+
+    color: #fff;
+  }
+}
