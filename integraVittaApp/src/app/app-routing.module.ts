@@ -8,6 +8,14 @@ const routes: Routes = [
   },  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'exercicio',
+    loadChildren: () => import('./exercicio/exercicio.module').then( m => m.ExercicioPageModule)
+  },
+  {
+    path: 'exercicio-selecionado',
+    loadChildren: () => import('./exercicio-selecionado/exercicio-selecionado.module').then( m => m.ExercicioSelecionadoPageModule)
   }
 
 ];
