@@ -14,16 +14,38 @@ ion-title {
 
 ion-content {
   --ion-background-color: #161925;
-  ion-card {
+
+  .card{
     display: flex;
     background: linear-gradient(to bottom, #ff61d2 0%, #fe9090 90%);
     border-radius: 15px;
 
-    ion-card-title {
+    #cardTitulo {
+      text-align: center;
       font-weight: bold;
       color: #fff;
     }
 
     color: #fff;
+  }
+
+  div {
+    ion-card{
+      background: #fff;
+      border-radius: 15px;
+    }
+
+    .exDescricao {
+      font-family: "Lucida Console", "Courier New", monospace;
+      text-align: justify;
+      background: #F2C94C;
+      ion-card-title{
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+      }
+      ion-card-content {
+        color: rgb(0, 0, 0);
+      }
+    }
   }
 }

@@ -6,18 +6,30 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="ion-padding">
+<ion-content [fullscreen]="true">
 
   <ion-card button="true">
-    <ion-card-header>
-      <ion-card-title>Plano A</ion-card-title>
-    </ion-card-header>
-  </ion-card>
+    <ion-card-content>
 
-  <ion-card button="true">
-    <ion-card-header>
-      <ion-card-title>Plano A</ion-card-title>
-    </ion-card-header>
-  </ion-card>
+      <ion-list lines="full">
+        <ion-list-header>
+          <h1>Plano A</h1>
+        </ion-list-header>
 
+        <ion-item color="none" href="exercicio-selecionado">
+          <ion-label>
+            Exercicio 1
+          </ion-label>
+        </ion-item>
+
+        <ion-item color="none" href="exercicio-selecionado">
+          <ion-label>
+            Exercicio 2
+          </ion-label>
+        </ion-item>
+
+      </ion-list>
+
+    </ion-card-content>
+  </ion-card>
 </ion-content>
