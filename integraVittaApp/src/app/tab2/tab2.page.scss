@@ -1,29 +1,32 @@
 ion-toolbar,
 ion-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-family: "Lucida Console", "Courier New", monospace;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 30px;
-  color: #f2c13b;
-  --ion-toolbar-background: #161925;
+  padding: 15px;
+  font-family: Spartan;
+  font-weight: 600;
+  font-size: 40px;
+  color: #F2C13B;
+  --ion-toolbar-background: #fff;
 }
 
 ion-content {
-  --ion-background-color: #161925;
+
+  --ion-background-color: #fff;
+
+  h1{
+    font-family: Spartan;
+    color: #000;
+    margin-bottom: 25px;
+  }
+
   ion-card {
     display: flex;
-    background: linear-gradient(to bottom, #ff61d2 0%, #fe9090 90%);
+    background: #F2C13B;
     border-radius: 15px;
+    margin-bottom: 20px;
 
     ion-card-title {
-      font-weight: bold;
-      color: #fff;
+      font-family: Spartan;
+      color: #000;
     }
-
-    color: #fff;
   }
 }

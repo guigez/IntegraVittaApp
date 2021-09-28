@@ -1,18 +1,22 @@
-<ion-content>
-  <div class="logo ion-padding ion-text-center">
-    <img src="../../assets/images/logo.svg"/>
-  </div>
-  <div class="login ion-padding ion-text-center">
-    <ion-item class="item ion-margin"  transparent>
-      <ion-label class="label" position="floating">Usuário</ion-label>
-      <ion-input class="input" type="email"></ion-input>
-    </ion-item>
+<ion-header class="ion-no-border"> </ion-header>
 
-    <ion-item class="item ion-margin" transparent>
-      <ion-label class="label" position="floating">Senha</ion-label>
-      <ion-input class="input" type="password"></ion-input>
-    </ion-item>
+<ion-content class="ion-padding ion-text-center">
+  <img class="logo" src="../../assets/images/logo_login.svg"/>
 
-    <ion-button href="tabs/tab1"class="button ion-margin"  roundsize="large" expand="block">Login</ion-button>
+  <h1 class="title1">Bem Vindo a Integra Vitta</h1>
+
+  <ion-item class="item">
+    <ion-label position="floating" class="textColor">Email</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item class="item">
+    <ion-label position="floating" class="textColor">Senha</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <div class="button ion-text-center">
+    <ion-button class="button-signup" expand="block" shape="round">ENTRAR</ion-button>
+    <a href="login" class="forgot">ESQUECE A SENHA?</a>
   </div>
 </ion-content>

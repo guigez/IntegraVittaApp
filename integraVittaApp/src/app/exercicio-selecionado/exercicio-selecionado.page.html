@@ -1,37 +1,40 @@
-<ion-header [translucent]="true">
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title class="ion-text-center">
-      Integra Vitta
-    </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button href="">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" >
+<ion-content class="ion-padding">
+  <h1>Exercício</h1>
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title id="cardTitulo">Exercicio 1</ion-card-title>
+    </ion-card-header>
+  </ion-card>
 
-    <ion-card class="card">
-      <ion-card-header>
-        <ion-card-title id="cardTitulo">Exercicio 1</ion-card-title>
-      </ion-card-header>
-    </ion-card>
+  <h1>Serie</h1>
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title>3 x 15</ion-card-title>
+    </ion-card-header>
+  </ion-card>
 
-    <div>
-      <ion-card>
-        <ion-card-content>
+  <h1>Descrição</h1>
+  <ion-card class="card">
+    <ion-card-content>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu urna
+        consequat, tempus massa sed, laoreet turpis. Morbi id nunc a velit
+        ornare dictum. Nunc porta porta tortor, ac lacinia leo ultrices pretium.
+      </p>
+    </ion-card-content>
+  </ion-card>
 
-          <ion-card class="exDescricao">
-            <ion-card-header>
-              <ion-card-title>3 x 15</ion-card-title>
-            </ion-card-header>
-          </ion-card>
+  <h1>Exemplo</h1>
 
-          <ion-card class="exDescricao">
-            <ion-card-content>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu urna consequat, tempus massa sed, laoreet turpis. Morbi id nunc a velit ornare dictum. Nunc porta porta tortor, ac lacinia leo ultrices pretium.
-              </p>
-            </ion-card-content>
-          </ion-card>
 
-        </ion-card-content>
-      </ion-card>
-    </div>
 </ion-content>
