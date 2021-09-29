@@ -1,51 +1,15 @@
-ion-toolbar,
-ion-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-family: "Lucida Console", "Courier New", monospace;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 30px;
-  color: #f2c13b;
-  --ion-toolbar-background: #161925;
-}
 
 ion-content {
-  --ion-background-color: #161925;
-
+  h1{
+    font-family: Spartan;
+    font-size: 20px;
+  }
   .card{
     display: flex;
-    background: linear-gradient(to bottom, #ff61d2 0%, #fe9090 90%);
+    font-family: Roboto;
+    background:#F2C13B;
     border-radius: 15px;
-
-    #cardTitulo {
-      text-align: center;
-      font-weight: bold;
-      color: #fff;
-    }
-
-    color: #fff;
-  }
-
-  div {
-    ion-card{
-      background: #fff;
-      border-radius: 15px;
-    }
-
-    .exDescricao {
-      font-family: "Lucida Console", "Courier New", monospace;
-      text-align: justify;
-      background: #F2C94C;
-      ion-card-title{
-        font-weight: bold;
-        color: rgb(0, 0, 0);
-      }
-      ion-card-content {
-        color: rgb(0, 0, 0);
-      }
-    }
+    color: #000;
+    margin-bottom: 50px;
   }
 }

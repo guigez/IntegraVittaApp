@@ -11,5 +11,4 @@ export class ExercicioPage implements OnInit {
 
   ngOnInit() {
   }
-
 }

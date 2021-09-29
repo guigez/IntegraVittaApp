@@ -1,12 +1,14 @@
-<ion-header [translucent]="true">
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title class="ion-text-center">
-      Integra Vitta
-    </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button href="">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content>
 
   <ion-card button="true">
     <ion-card-content>
@@ -20,16 +22,18 @@
           <ion-label>
             Exercicio 1
           </ion-label>
+          <span>3 x 15</span>
         </ion-item>
 
         <ion-item color="none" href="exercicio-selecionado">
           <ion-label>
             Exercicio 2
           </ion-label>
+          <span>3 x 15</span>
         </ion-item>
 
       </ion-list>
-
     </ion-card-content>
   </ion-card>
+
 </ion-content>
