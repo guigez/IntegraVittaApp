@@ -15,23 +15,18 @@
 
       <ion-list lines="full">
         <ion-list-header>
-          <h1>Plano A</h1>
+          <h1>{{plano.nome}}</h1>
         </ion-list-header>
 
-        <ion-item color="none" href="exercicio-selecionado">
-          <ion-label>
-            Exercicio 1
-          </ion-label>
-          <span>3 x 15</span>
-        </ion-item>
-
-        <ion-item color="none" href="exercicio-selecionado">
-          <ion-label>
-            Exercicio 2
-          </ion-label>
-          <span>3 x 15</span>
-        </ion-item>
-
+        <ng-template ngFor let-item [ngForOf]="plano.exercicios" let-i="index" [ngForTrackBy]="trackByFn">
+          <ion-item color="none" href="exercicio-selecionado">
+            <ion-label>
+              {{item.nome}}
+            </ion-label>
+            <span>{{item.series}} x {{item.repeticoes}}</span>
+          </ion-item>
+        </ng-template>
+        
       </ion-list>
     </ion-card-content>
   </ion-card>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Exercicio } from '../models/exercicios';
 
 @Component({
   selector: 'app-exercicio-selecionado',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./exercicio-selecionado.page.scss'],
 })
 export class ExercicioSelecionadoPage implements OnInit {
-
+  exercicio : Exercicio;
   constructor() { }
 
   ngOnInit() {
+    this.exercicio = JSON.parse(localStorage.getItem('ex-sel'))
   }
 
 }

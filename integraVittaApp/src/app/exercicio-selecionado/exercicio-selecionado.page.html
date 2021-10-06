@@ -12,25 +12,21 @@
   <h1>Exercício</h1>
   <ion-card class="card">
     <ion-card-header>
-      <ion-card-title id="cardTitulo">Exercicio 1</ion-card-title>
+      <ion-card-title id="cardTitulo">{{exercicio.nome}}</ion-card-title>
     </ion-card-header>
   </ion-card>
 
   <h1>Serie</h1>
   <ion-card class="card">
     <ion-card-header>
-      <ion-card-title>3 x 15</ion-card-title>
+      <ion-card-title>{{exercicio.series}} x {{exercicio.repeticoes}}</ion-card-title>
     </ion-card-header>
   </ion-card>
 
   <h1>Descrição</h1>
   <ion-card class="card">
     <ion-card-content>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu urna
-        consequat, tempus massa sed, laoreet turpis. Morbi id nunc a velit
-        ornare dictum. Nunc porta porta tortor, ac lacinia leo ultrices pretium.
-      </p>
+      <p>{{exercicio.descricao}}</p>
     </ion-card-content>
   </ion-card>
 
