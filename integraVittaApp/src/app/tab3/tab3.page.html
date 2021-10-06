@@ -6,6 +6,43 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content class="ion-padding">
 
+  <ion-card button="true" >
+    <ion-card-header>
+      <ion-card-title>Olá Wilson, seu pagamento está</ion-card-title>
+      <ion-card-content>
+        Tudo ok
+      </ion-card-content>
+    </ion-card-header>
+  </ion-card>
+
+
+  <ion-card button="true">
+    <ion-card-content>
+
+      <ion-list lines="full">
+        <ion-list-header>
+          <h1>Pagamentos Anteriores</h1>
+        </ion-list-header>
+
+        <ion-item color="none">
+          <ion-label>
+            Setembro
+          </ion-label>
+          <span>Pago em 31/09</span>
+        </ion-item>
+        
+        <ion-item color="none">
+          <ion-label>
+            Agosto
+          </ion-label>
+          <span>Pago em 31/08</span>
+        </ion-item>
+
+          
+        
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
