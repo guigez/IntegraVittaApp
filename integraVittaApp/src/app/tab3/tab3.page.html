@@ -8,11 +8,11 @@
 
 <ion-content class="ion-padding">
 
-  <ion-card-green *ngIf="this.pagamento == 1" button="true">
+  <cardgreen *ngIf="this.pagamento == 1" button="true">
     <ion-card-header>
       <ion-card-title>Olá, Wilson! Seu pagamento está OK.</ion-card-title>
     </ion-card-header>
-  </ion-card-green>
+  </cardgreen>
   
   <ion-card *ngIf="this.pagamento == 2" button="true">
     <ion-card-header>
@@ -20,11 +20,11 @@
     </ion-card-header>
   </ion-card>
 
-  <ion-card-red *ngIf="this.pagamento == 3" button="true">
+  <cardred *ngIf="this.pagamento == 3" button="true">
     <ion-card-header>
       <ion-card-title>Olá, Wilson! Seu pagamento está atrasado!</ion-card-title>
     </ion-card-header>
-  </ion-card-red>
+  </cardred>
 
 
   <ion-card button="true">
