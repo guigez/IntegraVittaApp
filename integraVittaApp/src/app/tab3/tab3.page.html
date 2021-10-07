@@ -8,12 +8,11 @@
 
 <ion-content class="ion-padding">
 
-  <ion-card button="true" >
+  <ion-card button="true">
     <ion-card-header>
-      <ion-card-title>Olá Wilson, seu pagamento está</ion-card-title>
-      <ion-card-content>
-        Tudo ok
-      </ion-card-content>
+      <ion-card-title *ngIf="this.pagamento == 1" [ngStyle]="{'color': 'green'}">Olá, Wilson! Seu pagamento está OK.</ion-card-title>
+      <ion-card-title *ngIf="this.pagamento == 2" [ngStyle]="{'color': 'black'}">Olá, Wilson! Seu pagamento está próximo.</ion-card-title>
+      <ion-card-title *ngIf="this.pagamento == 3" [ngStyle]="{'color': 'rgb(230,0,0)'}">Olá, Wilson! Seu pagamento está atrasado!</ion-card-title>
     </ion-card-header>
   </ion-card>
 
@@ -30,17 +29,15 @@
           <ion-label>
             Setembro
           </ion-label>
-          <span>Pago em 31/09</span>
+          <span><ion-label>Pago em 30/09</ion-label></span>
         </ion-item>
         
         <ion-item color="none">
           <ion-label>
             Agosto
           </ion-label>
-          <span>Pago em 31/08</span>
+          <span><ion-label>Pago em 31/08</ion-label></span>
         </ion-item>
-
-          
         
       </ion-list>
     </ion-card-content>
