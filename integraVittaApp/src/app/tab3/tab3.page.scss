@@ -24,12 +24,27 @@ ion-content {
     background: #F2C13B;
     border-radius: 15px;
     margin-bottom: 20px;
+    text-align: center;
+  }
+  ion-card-green {
+    display: flex;
+    background: #0aa505;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  ion-card-red {
+    display: flex;
+    background: #ff1f1f;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
 
-    ion-card-title {
-      font-family: Spartan;
-      color: #000000;
-      font-weight: bold;
-    }
+  ion-card-title {
+    font-family: Spartan;
+    color: #000000;
+    font-weight: bold;
   }
 }
 

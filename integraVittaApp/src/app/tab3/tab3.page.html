@@ -8,13 +8,23 @@
 
 <ion-content class="ion-padding">
 
-  <ion-card button="true">
+  <ion-card-green *ngIf="this.pagamento == 1" button="true">
     <ion-card-header>
-      <ion-card-title *ngIf="this.pagamento == 1" [ngStyle]="{'color': 'green'}">Olá, Wilson! Seu pagamento está OK.</ion-card-title>
-      <ion-card-title *ngIf="this.pagamento == 2" [ngStyle]="{'color': 'black'}">Olá, Wilson! Seu pagamento está próximo.</ion-card-title>
-      <ion-card-title *ngIf="this.pagamento == 3" [ngStyle]="{'color': 'rgb(230,0,0)'}">Olá, Wilson! Seu pagamento está atrasado!</ion-card-title>
+      <ion-card-title>Olá, Wilson! Seu pagamento está OK.</ion-card-title>
+    </ion-card-header>
+  </ion-card-green>
+  
+  <ion-card *ngIf="this.pagamento == 2" button="true">
+    <ion-card-header>
+      <ion-card-title>Olá, Wilson! Seu pagamento está próximo.</ion-card-title>
     </ion-card-header>
   </ion-card>
+
+  <ion-card-red *ngIf="this.pagamento == 3" button="true">
+    <ion-card-header>
+      <ion-card-title>Olá, Wilson! Seu pagamento está atrasado!</ion-card-title>
+    </ion-card-header>
+  </ion-card-red>
 
 
   <ion-card button="true">
