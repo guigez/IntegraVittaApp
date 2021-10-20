@@ -40,16 +40,16 @@ export class AuthService {
     );
   }
 
-  login(credentials: {email: string, pw: string}): Observable<any> {
-    if(credentials.email != 'wilson@email.com' || credentials.pw != '123'){
-      return of(null);
+  login(credentials: {email: string, password: string}): Observable<any> {
+    if(credentials.email == 'wilson@email.com' && credentials.password == '123'){
+      return of('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c');
     }
 
     //request para api para verificar o usuario
-    return this.http.get('http://localhost:3001/').pipe(
+    return this.http.post('http://localhost:3001/api/loginAlunos', credentials).pipe(
       take(1),
       map(res => {
-        return 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c'
+        return JSON.stringify(res);
       }),
 
       switchMap(token => {
@@ -58,6 +58,7 @@ export class AuthService {
         this.userData.next(decoded);
 
         let storageObs = from(this.storage.set(TOKEN_KEY, token));
+        console.log(this.storage.set(TOKEN_KEY, token));
         return storageObs;
 
       })

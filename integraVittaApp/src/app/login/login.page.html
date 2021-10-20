@@ -7,16 +7,16 @@
 
   <ion-item class="item">
     <ion-label position="floating" class="textColor">Email</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input #email type="text"></ion-input>
   </ion-item>
 
   <ion-item class="item">
     <ion-label position="floating" class="textColor">Senha</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input #password type="text"></ion-input>
   </ion-item>
 
   <div class="button ion-text-center">
-    <ion-button class="button-signup" expand="block" shape="round">ENTRAR</ion-button>
+    <ion-button class="button-signup" expand="block" shape="round" (click)="login(email.value, password.value)">ENTRAR</ion-button>
     <a href="login" class="forgot">ESQUECE A SENHA?</a>
   </div>
 </ion-content>

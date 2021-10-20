@@ -11,8 +11,8 @@ import { AuthService } from '../services/auth.service';
 })
 export class LoginPage implements OnInit {
   credentials = {
-    email: 'wilson@EmailValidator.com',
-    pw: '123'
+    email: 'teste4@gmail.com',
+    password: '123'
   };
 
   constructor(private auth:AuthService, private alertCtrl: AlertController, private router: Router) { }
@@ -20,15 +20,20 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
-  login(){
+  login(email: string, password: string){
+    this.credentials = { 
+      email: email,
+      password: password
+    };
     this.auth.login(this.credentials).subscribe(async res => {
       if(res){
         this.router.navigateByUrl('/tabs');
       } 
+
       else{
         const alert = await this.alertCtrl.create({
           header:'Login Falhou',
-          message: 'Credenciais Erradas',
+          message: 'Email ou Senha errado!',
           buttons: ['OK']
         });
         await alert.present();
