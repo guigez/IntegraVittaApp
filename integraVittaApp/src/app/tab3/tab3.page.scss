@@ -5,17 +5,18 @@ ion-title {
   font-weight: 600;
   font-size: 40px;
   color: #F2C13B;
-  --ion-toolbar-background: #fff;
+  --ion-toolbar-background: #ffffff;
 }
 
 ion-content {
 
-  --ion-background-color: #fff;
+  --ion-background-color: #ffffff;
 
   h1{
     font-family: Spartan;
     color: #000;
     margin-bottom: 25px;
+    margin-left: 30px;
   }
 
   ion-card {
@@ -23,11 +24,27 @@ ion-content {
     background: #F2C13B;
     border-radius: 15px;
     margin-bottom: 20px;
+    text-align: center;
+  }
+  cardgreen {
+    display: flex;
+    background: #0aa505;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  cardred {
+    display: flex;
+    background: #ff1f1f;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
 
-    ion-card-title {
-      font-family: Spartan;
-      color: #000;
-    }
+  ion-card-title {
+    font-family: Spartan;
+    color: #000000;
+    font-weight: bold;
   }
 }
 
@@ -42,6 +59,5 @@ ion-item{
   font-family: Spartan;
   --padding-start: 0px;
   --padding-bottom: 0px;
+  font-size: 25px;
 }
-
-

@@ -1,7 +1,7 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-buttons slot="primary">
-      <ion-button href="">
+      <ion-button routerLink="/exercicio">
         <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -23,12 +23,13 @@
     </ion-card-header>
   </ion-card>
 
-  <h1>Descrição</h1>
+  <h1>Músculo</h1>
   <ion-card class="card">
     <ion-card-content>
-      <p>{{exercicio.descricao}}</p>
+      <ion-card-title>{{exercicio.trabalha}}</ion-card-title>
     </ion-card-content>
   </ion-card>
 
   <h1>Exemplo</h1>
+  <img src="../../assets/images/RemadaArticulada.gif"/>
 </ion-content>
