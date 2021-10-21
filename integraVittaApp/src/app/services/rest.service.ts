@@ -1,30 +1,36 @@
 
 import { Injectable } from  '@angular/core';
 
-import { HttpClient } from  '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient, HttpHeaders } from  '@angular/common/http';
+import { from, Observable, of } from 'rxjs';
 
 import {Plano} from '../models/plano'
+import { Storage } from '@ionic/storage';
+import {AuthService} from './auth.service'
+import { FactoryTarget } from '@angular/compiler';
 
+const TOKEN_KEY = 'jwt-token';
 
 @Injectable({ providedIn: 'root' })
 export class RestService {
 
 
   private url: string = 'http://localhost:3001/api/';
-  private httpOptions: any = {ContentType : 'application/json'};
+  private options : any = {}
 
-  constructor(private http: HttpClient) { }
 
-  getPlano(id : string) : Observable<Plano[]> {
-    return this.http.get<Plano[]>(this.url + 'treino/findOneById/' + id)
+   constructor(private storage: Storage, private http: HttpClient, private authService: AuthService) {
+
   }
 
-  getPlanoFiltro(search : String) : Observable<Plano[]> {
-    return this.http.get<Plano[]>(this.url + 'treino/findByNomeDescricao?search=' + search);
+  async getPlanoFiltro(search : String) {
+    let token = "erro";
+    await this.storage.get(TOKEN_KEY).then(res => {token = JSON.parse(res).token})
+
+    this.options = {'Authorization': 'Bearer ' + token}
+
+
+    return this.http.get<Plano[]>(this.url + 'treino/findByNomeDescricao?search=' + search, {headers: this.options});
   }
 
-  atualizarPlano(plano: Plano, id?: string) : Observable<any> {
-    return this.http.put<any>(this.url + 'treino/update/' + id, plano)
-  }
 }

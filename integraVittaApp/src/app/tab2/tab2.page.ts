@@ -18,9 +18,7 @@ export class Tab2Page {
   }
 
   buscarPlanos(): void {
-    this.rest.getPlanoFiltro('').subscribe(res => {
-      this.planos = res;
-    })
+    this.rest.getPlanoFiltro('').then((data) => data.subscribe(res => this.planos = res))
   }
 
   abrirPlano(plano): void {
