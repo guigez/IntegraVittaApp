@@ -7,7 +7,7 @@ import { from, Observable, of } from 'rxjs';
 import {Plano} from '../models/plano'
 import { Storage } from '@ionic/storage';
 import {AuthService} from './auth.service'
-import { FactoryTarget } from '@angular/compiler';
+
 
 const TOKEN_KEY = 'jwt-token';
 

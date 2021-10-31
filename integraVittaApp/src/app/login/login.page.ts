@@ -20,12 +20,11 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
-  login(email: string, password: string){
-    this.credentials = { 
-      email: email,
-      password: password
-    };
+  login(){
+
+    console.log( this.credentials)
     this.auth.login(this.credentials).subscribe(async res => {
+      console.log(res)
       if(res){
         this.router.navigateByUrl('/tabs');
       } 

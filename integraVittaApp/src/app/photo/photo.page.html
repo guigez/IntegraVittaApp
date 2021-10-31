@@ -1,0 +1,25 @@
+<ion-content>
+  <ion-toolbar  style="--background: #F2C13B">
+    <ion-title style="color: #fff">Editar Foto</ion-title>
+    <ion-buttons slot='end' (click)="dismiss()"><span style="color: #fff">Fechar</span><ion-icon name="close-outline" style='font-size: 25px; color: #fff'></ion-icon></ion-buttons>
+  </ion-toolbar>
+
+    <ion-img [src]="photo"></ion-img>
+
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button style="--background: #F2C13B" (click)="addPhoto()">
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ng-template [ngIf]="haschanged">
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-button style="--background: #F2C13B;height:50px"  (click)="savePhoto()">
+        <span style="color: #fff">Aplicar</span>
+        <ion-icon name="save-outline"></ion-icon>
+      </ion-button>
+    </ion-fab>
+  </ng-template>
+  
+</ion-content>
