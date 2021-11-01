@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Plano } from '../models/plano';
 import { RestService } from '../services/rest.service';
 
 @Component({
-  selector: 'app-tab2',
-  templateUrl: 'tab2.page.html',
-  styleUrls: ['tab2.page.scss']
+  selector: 'app-planos',
+  templateUrl: 'planos.page.html',
+  styleUrls: ['planos.page.scss']
 })
-export class Tab2Page {
+export class PlanosPage implements OnInit {
 
   planos : Plano[];
 

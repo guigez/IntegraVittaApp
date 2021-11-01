@@ -26,7 +26,7 @@ export class LoginPage implements OnInit {
     this.auth.login(this.credentials).subscribe(async res => {
       console.log(res)
       if(res){
-        this.router.navigateByUrl('/tabs');
+        this.router.navigateByUrl('/main');
       } 
 
       else{

@@ -3,21 +3,20 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Tab2Page } from './tab2.page';
+import { PayPage } from './pay.page';
 
-import { Tab2PageRoutingModule } from './tab2-routing.module';
-import { RestService } from '../services/rest.service';
+
+
+import { PayPageRoutingModule } from './pay-routing.module';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    Tab2PageRoutingModule
+    PayPageRoutingModule
+    
   ],
-  declarations: [Tab2Page],
-  providers: [
-    RestService,
-  ]
+  declarations: [PayPage]
 })
-export class Tab2PageModule {}
+export class PayPageModule {}

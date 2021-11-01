@@ -8,10 +8,20 @@ const routes: Routes = [
    loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
   },
   {
-    path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule),
+    path: 'main',
+    loadChildren: () => import('./main/main.module').then(m => m.MainPageModule),
     canActivate: [AuthGuard]
   },
+  {
+    path: 'planos',
+    loadChildren: () => import('./planos/planos.module').then(m => m.PlanosPageModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'pay',
+    loadChildren: () => import('./pay/pay.module').then(m => m.PayPageModule),
+    canActivate: [AuthGuard]
+  },  
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule),
@@ -31,9 +41,6 @@ const routes: Routes = [
     path: 'esqueceu',
     loadChildren: () => import('./esqueceu/esqueceu.module').then( m => m.EsqueceuPageModule)
   }
-
-
-
 ];
 @NgModule({
   imports: [

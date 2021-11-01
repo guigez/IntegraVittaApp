@@ -3,21 +3,21 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Tab3Page } from './tab3.page';
+import { PlanosPage } from './planos.page';
 
-
-
-import { Tab3PageRoutingModule } from './tab3-routing.module';
+import { PlanosPageRoutingModule } from './planos-routing.module';
+import { RestService } from '../services/rest.service';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    RouterModule.forChild([{ path: '', component: Tab3Page }]),
-    Tab3PageRoutingModule,
-    
+    PlanosPageRoutingModule
   ],
-  declarations: [Tab3Page]
+  declarations: [PlanosPage],
+  providers: [
+    RestService,
+  ]
 })
-export class Tab3PageModule {}
+export class PlanosPageModule {}
