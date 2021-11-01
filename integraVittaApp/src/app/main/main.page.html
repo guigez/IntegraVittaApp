@@ -1,18 +1,24 @@
-<ion-header class="ion-no-border">
-  <ion-toolbar>
-    <ion-title class="ion-text-center">
-      Integra Vitta
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
 
-<div class="photo_information ion-text-center">
-  <img class="photo" src="assets/images/user.svg" (click)="presentModal()">
-  <span>Nome <strong> Wilson Antunes </strong></span>
-  <span>Idade <strong> 22 </strong></span>
-  <span>Objetivo <strong> Ficar trincado e definido </strong></span>
-</div>
+  <div class="bg">
+    <img src="assets/images/bg.svg">
+  </div>
+
+  <div class="container">
+    <div class="photo_information">
+      <img class="photo" src="assets/images/user.svg" (click)="presentModal()">
+      <div class="nome ion-text-center">Wilson Antunes</div>
+    </div>
+  </div>
+
+  <div class="card-menu">
+    <ion-card text-center button=true href="planos">
+      <h2>Planos</h2>
+    </ion-card>
+    <ion-card text-center button=true href="pay">
+      <h2>Pagamentos</h2>
+    </ion-card>
+  </div>
+
 
 </ion-content>
