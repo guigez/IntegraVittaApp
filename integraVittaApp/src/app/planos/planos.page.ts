@@ -9,7 +9,7 @@ import { RestService } from '../services/rest.service';
 })
 export class PlanosPage implements OnInit {
 
-  planos : Plano[] = new Array<Plano>();
+  planos : Plano[]
 
   constructor(private rest: RestService) {}
 
@@ -19,7 +19,7 @@ export class PlanosPage implements OnInit {
 
   buscarPlanos(): void {
     this.rest.getPlano().then((data) => data.subscribe(res => {
-      this.planos.push(res.data.plano)
+      this.planos = res.data.plano
       console.log(res)
     }))
   }
