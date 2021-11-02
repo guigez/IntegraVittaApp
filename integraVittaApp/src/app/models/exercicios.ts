@@ -4,4 +4,5 @@ export interface Exercicio {
     trabalha: String;
     series: number;
     repeticoes: number;
+    preview: any;
   }

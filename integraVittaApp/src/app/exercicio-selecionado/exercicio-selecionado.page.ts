@@ -12,6 +12,7 @@ export class ExercicioSelecionadoPage implements OnInit {
 
   ngOnInit() {
     this.exercicio = JSON.parse(localStorage.getItem('ex-sel'))
+    console.log(this.exercicio);
   }
 
 }

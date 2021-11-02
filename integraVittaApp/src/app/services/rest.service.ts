@@ -23,14 +23,14 @@ export class RestService {
 
   }
 
-  async getPlanoFiltro(search : String) {
+  async getPlano() {
     let token = "erro";
     await this.storage.get(TOKEN_KEY).then(res => {token = JSON.parse(res).token})
 
     this.options = {'Authorization': 'Bearer ' + token}
 
 
-    return this.http.get<Plano[]>(this.url + 'treino/findByNomeDescricao?search=' + search, {headers: this.options});
+    return this.http.get<any>(this.url + 'aluno/getPlanos', {headers: this.options});
   }
 
 }
