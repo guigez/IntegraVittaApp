@@ -24,7 +24,8 @@ export class PhotoPage implements OnInit {
 
   dismiss() {
     this.modalController.dismiss({
-      'dismissed': true
+      'dismissed': true,
+      'photo' : this.photo
     });
   }
 

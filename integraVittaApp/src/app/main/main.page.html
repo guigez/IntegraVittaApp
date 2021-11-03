@@ -6,8 +6,10 @@
 
   <div class="container">
     <div class="photo_information">
-      <img class="photo" src="assets/images/user.svg" (click)="presentModal()">
-      <div class="nome ion-text-center">Wilson Antunes</div>
+      <ion-img *ngIf = '!user || !user.photo' class="photo" src="assets/images/user.svg" (click)="presentModal()"></ion-img>
+      <ion-img *ngIf = 'user && user.photo' class="photo" [src]="this.user.photo" (click)="presentModal()"></ion-img>
+
+      <div class="nome ion-text-center">{{user.nome}}</div>
     </div>
   </div>
 
