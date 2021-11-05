@@ -33,6 +33,7 @@
     "@ionic-native/file": "^5.36.0",
     "@ionic/angular": "^5.5.2",
     "@ionic/storage": "^2.1.3",
+    "capacitor-image-crop": "^2.0.0",
     "cordova-sqlite-storage": "^6.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",

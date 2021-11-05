@@ -1281,6 +1281,13 @@
   dependencies:
     tslib "^2.1.0"
 
+"@capacitor/core@latest":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@capacitor/core/-/core-3.3.0.tgz#dd266b1ea5956a059c6fe3496fe156c419f184e3"
+  integrity sha512-bKkg/IGALz5OKJPGwtGXoqi4JUXWbuILnZ9J12Mv21fPMFBoszYOiMfm7FqdcCwqcyJWCdG3SQDxCz0Q3e2y8Q==
+  dependencies:
+    tslib "^2.1.0"
+
 "@capacitor/filesystem@^1.0.5":
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@capacitor/filesystem/-/filesystem-1.0.5.tgz#74a87219ca0b815c5093bcce768868195b2a2e1a"
@@ -2809,6 +2816,13 @@ canonical-path@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/canonical-path/-/canonical-path-1.0.0.tgz#fcb470c23958def85081856be7a86e904f180d1d"
   integrity sha512-feylzsbDxi1gPZ1IjystzIQZagYYLvfKrSuygUCgf7z6x790VEzze5QEkdSV1U58RA7Hi0+v6fv4K54atOzATg==
+
+capacitor-image-crop@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/capacitor-image-crop/-/capacitor-image-crop-2.0.0.tgz#7f6d05a148b0875a3062ac860f2b67c4789af5f9"
+  integrity sha512-siy9JdlVk2o70hi3bSR5BBniqtYQoUfLSfTdu5BTON6GcCk4q4lkTwNiVR7a4x221U9FxV/RaxkyF9ctrnbeZg==
+  dependencies:
+    "@capacitor/core" latest
 
 caseless@~0.12.0:
   version "0.12.0"
