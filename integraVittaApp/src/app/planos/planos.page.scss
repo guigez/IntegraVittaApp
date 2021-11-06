@@ -1,11 +1,11 @@
-ion-toolbar,
+ion-toolbar{
+  --background: #F2C13B;
+
+}
 ion-title {
-  padding: 15px;
-  font-family: Spartan;
-  font-weight: 600;
-  font-size: 40px;
-  color: #F2C13B;
-  --ion-toolbar-background: #fff;
+  color: #fff;
+  font-weight: bold;
+  font-size: 25pt;
 }
 
 ion-content {

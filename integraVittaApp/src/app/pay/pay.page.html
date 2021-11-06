@@ -1,56 +1,53 @@
-<ion-header class="ion-no-border">
-  <ion-toolbar>
+<ion-header >
+  <ion-toolbar >
     <ion-title class="ion-text-center">
       Integra Vitta
     </ion-title>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/main">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content class="ion-padding">
 
-  <cardgreen *ngIf="this.pagamento == 1" button="true">
-    <ion-card-header>
-      <ion-card-title>Olá, Wilson! Seu pagamento está OK.</ion-card-title>
-    </ion-card-header>
-  </cardgreen>
+
+  <ion-card style="margin: auto; width:100%; text-align: center; ">
+    <h1>Status do pagamento</h1>
+    
+    <span *ngIf="this.status == 1" >
+      <ion-icon style="font-size: 80px; color: #0aa505;" name="checkmark-circle"></ion-icon>
+      <h2>Em dia</h2>
+    </span>
+
+    <span *ngIf="this.status == 2" >
+      <ion-icon style="font-size: 80px; color: #F2C13B;" name="warning"></ion-icon>
+      <h2>Próximo</h2>
+    </span>
+
+    <span *ngIf="this.status == 3" >
+      <ion-icon style="font-size: 80px; color: #ff1f1f;" name="close-circle"></ion-icon>
+      <h2>Atrasado</h2>
+    </span>
+  </ion-card >
+
+  <br/>
+  <br/>
+  <ion-card style="margin: auto; width: 100%; text-align: center; ">
+    <h2>Histórico</h2>
+    <ion-grid class="ion-margin">
+      <ion-row>
+        <ion-col style="color:#275ccf; font-size: 15pt;">Mês</ion-col>
+        <ion-col style="color:#275ccf; font-size: 15pt;">Data</ion-col>
+      </ion-row>
+      <ion-row *ngFor="let pag of pagamentos; index as i">
+        <ion-col>{{pag.mes}}</ion-col>
+        <ion-col>{{ pag.datOper | date: 'dd/MM/yyyy' }}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
   
-  <ion-card *ngIf="this.pagamento == 2" button="true">
-    <ion-card-header>
-      <ion-card-title>Olá, Wilson! Seu pagamento está próximo.</ion-card-title>
-    </ion-card-header>
-  </ion-card>
-
-  <cardred *ngIf="this.pagamento == 3" button="true">
-    <ion-card-header>
-      <ion-card-title>Olá, Wilson! Seu pagamento está atrasado!</ion-card-title>
-    </ion-card-header>
-  </cardred>
-
-
-  <ion-card button="true">
-    <ion-card-content>
-
-      <ion-list lines="full">
-        <ion-list-header>
-          <h1>Pagamentos Anteriores</h1>
-        </ion-list-header>
-
-        <ion-item color="none">
-          <ion-label>
-            Setembro
-          </ion-label>
-          <span><ion-label>Pago em 30/09</ion-label></span>
-        </ion-item>
-        
-        <ion-item color="none">
-          <ion-label>
-            Agosto
-          </ion-label>
-          <span><ion-label>Pago em 31/08</ion-label></span>
-        </ion-item>
-        
-      </ion-list>
-    </ion-card-content>
-  </ion-card>
-
 </ion-content>

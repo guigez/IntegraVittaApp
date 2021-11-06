@@ -43,4 +43,13 @@ export class RestService {
     return this.http.get<any>(this.url + 'aluno/getuser', {headers: this.options});
   }
 
+  async listarPagamentos(){
+    let token = "erro";
+    await this.storage.get(TOKEN_KEY).then(res => {token = JSON.parse(res).token})
+
+    this.options = {'Authorization': 'Bearer ' + token}
+
+
+    return this.http.get<any>(this.url + 'pagamento/listarPagamentos', {headers: this.options});
+  }
 }

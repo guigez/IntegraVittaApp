@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RestService } from '../services/rest.service';
 
 
 @Component({
@@ -8,16 +9,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PayPage implements OnInit{
 
-  pagamento : number;
+  status : number;
+  pagamentos : Array<any> = new Array<any>()
+  monthNames = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+  "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+];
   /*1: Ok
    *2: Próximo
    *3: Atrasado*/
 
-  constructor() {
-    this.pagamento = 1;
+  constructor(private restService: RestService) {
+    this.status = 1;
   }
   
   ngOnInit() {
+    this.restService.listarPagamentos().then(data => data.subscribe( res => {
+      console.log
+
+      res.data.pagamentos.forEach((e : any) => {
+        this.pagamentos.push({
+          datOper : e.datOper,
+          mes : this.monthNames[new Date(e.datOper).getMonth()]
+        })
+      });
+    }));
   }
 
 

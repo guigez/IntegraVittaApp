@@ -1,30 +1,21 @@
-ion-toolbar,
+ion-toolbar{
+  --background: #F2C13B;
+
+}
 ion-title {
-  padding: 15px;
-  font-family: Spartan;
-  font-weight: 600;
-  font-size: 40px;
-  color: #F2C13B;
-  --ion-toolbar-background: #ffffff;
+  color: #fff;
+  font-weight: bold;
+  font-size: 25pt;
 }
 
 ion-content {
 
   --ion-background-color: #ffffff;
 
-  h1{
-    font-family: Spartan;
-    color: #000;
-    margin-bottom: 25px;
-    margin-left: 30px;
-  }
 
   ion-card {
-    display: flex;
-    background: #F2C13B;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    text-align: center;
+    background-color: #eee;
+    color: #000;
   }
   cardgreen {
     display: flex;
